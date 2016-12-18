@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
+  <style>
+  #container{width:1000px; padding-left:15px; padding-right:15px; margin:0 auto;}
+  .cl:after,.cl:before{content:" ";display:table}
+.cl:after{clear:both}
+.friend__item{display:flex; -webkit-align-content: center;
+        align-content: center;}
+     
+p{margin:5px 0;}
+.friend__info{padding-left:20px;}
+.friend__item{margin-bottom:20px;}
+  </style>
+
+</head>
+<body>
+<div id="container"></div>
+<script type="text/x-handlebars-template" id="friendTemplate">
+   {{#each list}}
+    <div class="friend__item" >
+   <img src="{{photo_100}}" alt="{{first_name}} {{last_name}}" class="friend__img__pic" width="100" height="100">
+      <div class="friend__info">
+     <p> {{first_name}} {{last_name}}</p>
+     <p> Возраст: {{age}} </p>  
+
+     <p> Дата рождения: {{bdate}} </p>                                                                                                   
+      </div>
+    </div>
+ {{/each}}
+</script>
+	<script src="main4.js"></script>
+</body>
+</html>
