@@ -76,15 +76,15 @@ new Promise(resolve => {
 
     // =============== Поиск ==================
     function searchIn(list, obj, input) {
-        for (let i = 0; i < list.children.length; ++i) {
-            list.children[i].style.display = 'none';
-        }
+
         for (let item of obj) {
             if (!input == "" & findPartial(item.first_name, item.last_name, input)) {
                 document.getElementById(item.uid).style.display = "block";
             } else if (input == "") {
                 document.getElementById(item.uid).style.display = "block";
-            }
+            } else{
+				document.getElementById(item.uid).style.display = "none";
+			}
         }
     }
 
