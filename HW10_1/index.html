@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+	<script src="main4.js"></script>
+	<style>
+	.wr{width:900px; margin:0 auto;}
+	input{height:40px; border:1px solid #ccc; padding-left:20px;}
+	ul{padding:0; margin:40px 0 0 0; }
+	li{padding:0 0 10px 20px; margin:0; list-style:none; font-style:italic;}
+	li:before{content:' - '; display:inline-block; padding-right:10px;}
+
+	</style>
+</head>
+<body>
+<div class="wr">
+<input type="text"  id="inputField" placeholder="Укажите город" value="" > 
+  <ul id="container"></ul>
+</div>
+  <script type="text/x-handlebars-template" id="citiesTemplate">
+   {{#each list}} <li id={{name}}>{{name}}</li> {{/each}}
+</script>
+
+</body>
+</html>
